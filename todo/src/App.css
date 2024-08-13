@@ -1,0 +1,232 @@
+body{
+  background-color: #1f1e1e;
+  color: white;
+  overflow: hidden;
+
+}
+
+.App h1{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1{
+  text-align: center;
+  font-family: w3-cursive;
+}
+.head1{
+  font-family: w3-cursive;
+}
+
+.Todo-Wrapper{
+background:#353434;
+padding: 2%;
+width: fit-content;
+margin-left: auto;
+margin-right: auto;
+margin-top: 2%;
+max-height: 80vh;
+overflow-y: auto;
+overflow-x: auto;
+box-shadow: 2px 2px 7px rgb(78, 25, 25);
+}
+
+.Todo-input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.Todo-inputitems{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+margin-right: 30px;
+
+}
+
+
+.Todo-inputitems label{
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 10px;
+}
+
+.Todo-inputitems input{
+  padding:10px;
+  padding-left: 10px;
+  width: 250px;
+  border:none;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Todo-inputitems input:focus{
+  outline: 2px solid rgb(247, 14, 14);
+}
+
+
+
+.second{
+ color: white;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin-right: 2px;
+background-color: rgb(71,71,71);
+outline: none;
+border: white;
+box-shadow: white;
+width: fit-content;
+padding: 10px;
+transition: transform 0.2s;
+
+}
+
+.second:active{
+  transform: scale(0.95);
+}
+
+.active{
+background-color: rgb(0,230,122);
+color: rgb(71,71,71);
+outline: solid;
+cursor: pointer;
+
+}
+
+.Todo-list{
+display: flex;
+flex-direction: column;
+background-color: #414040;
+margin-top:15px ;
+
+}
+
+
+.Todo-listitems{
+  padding-left: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  box-shadow: 0px 2px 4px rgb(39,38,38);
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+
+
+  
+}
+
+.Todo-listitems h3{
+  color: rgb(0,230,122);
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.Todo-listitems p{
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  color: rgb(189, 183, 183);
+  padding-bottom: 20px;
+}
+
+
+.icon1{
+cursor: pointer;
+font-size: 25px;
+transition: transform 0.2s;
+margin-right: 15px;
+
+}
+
+.icon1:hover{
+  color: red;
+}
+
+.icon2{
+  cursor: pointer;
+  font-size: 35px;
+  margin-left: 10px;
+  margin-right: 15px;
+  transition: transform 0.2s;
+
+}
+
+.icon2:hover{
+  color:rgb(20, 241, 20)
+}
+
+
+
+.icon1:active{
+  transform: scale(0.95);
+}
+
+.icon2:active{
+  transform: scale(0.95);
+}
+
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-57 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.button-57 span:last-child {
+  color: rgb(0, 0, 0);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.button-57:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgb(0,230,122);
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.button-57:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}

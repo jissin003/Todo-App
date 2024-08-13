@@ -1,0 +1,42 @@
+In this i am creating a todo app which  is an app that contains list of activities that i done and those i dont done.
+first is creating the structure using react app.jsx by creating div and the required elements in the div.
+    the we adding the use state hook and making the input displayed in the todolist items that the input we enter to be done
+    will appear on the todo list items and there is now exists a problem that when the page is refreshed so the entered tasks deleted automatically so 
+    we want to solve this
+
+    we used map and spread for all this and usestates for title description and the button on clicking the button the function call occours and inside that
+    the spread operator is used and map is used to display the input items on the todollist items
+
+
+    step 2
+
+    solving the problem of automatically deleting the contents after refreshing the pages.
+    we need to store this to store a string or array we need to stringify it and store it in local storage(here global object JSOn used)
+
+        syntax : localstorage.setItem('todolist',JSON.stringify(arrayname)); here store it as an array but there is also string so we need useeffect
+
+        here useeffect hook is needed when the page is loaded useeffect check whether there is an item in the local storage or not.
+
+        inside the useEffect we use JSON.parse to convets the string to an array. we need array here.
+
+             let savedTodo=JSON.parse(localStorage.getItem('todolist'));
+
+             here we are giving a conditiion that the 
+                nammal ivide null use akilla karanam if we use null map operation cannot be performedddd..
+                so we used this 
+
+                here conditon based on this
+
+                if(savedTodo){
+                    setAlltodo(savedTodo)  //nammal mandakate  pole change akuvannnn setAlltodo set akuvan but entelum ondel run akum illel onum ilala
+                    //entelum ondel matram work akum allel remains as an empty array (we initialy set as usestate([]))    alltodonteeees                    
+                }
+
+
+            in the case of delting an element we use the splice onclick used  and taken index as parameter of the arrow function which invoked
+            on clicking the deleted
+
+            on that a variable it taken spread operator is used and the splice used remember also the parameter of the functionis also the index
+           
+            reducedTodo.splice(index,1);//sytax of the splice 1 specify that only one element is to be removed.
+            update local storage and the setalltodo with the elments after remaining after the delete operation
